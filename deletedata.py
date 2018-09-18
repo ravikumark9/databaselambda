@@ -7,7 +7,7 @@ def delete_data(empid):
     query = "DELETE FROM employees WHERE emp_no = %s"
  
     try:
-        db = mysql.connector.connect(host='mytestdb.czznuh47qfib.us-east-2.rds.amazonaws.com',user='root',passwd='scsbbrc321', database='kart')
+        db = mysql.connector.connect(host=os.environ['HOST'],user='USERNAME',passwd='PASSWORD', port='PORT', database='kart')
         if db.is_connected():
             print('Connected to MySQL database')
         cursor = db.cursor()
