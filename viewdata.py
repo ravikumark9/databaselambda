@@ -1,7 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 
-
+#hi
 def lambda_handler(event, context):
 
     """ Connect to MySQL database """
